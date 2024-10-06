@@ -35,7 +35,7 @@ jobs:
           sudo apt-get install libvlccore-dev
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          chmod +x ./setup.sh
+          chmod +x ./setup/setup.sh
           sh ./setup/unix.sh
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -61,7 +61,7 @@ jobs:
         run: |
           haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          chmod +x ./setup.bat
+          chmod +x ./setup/setup.bat
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -87,7 +87,7 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          chmod +x ./setup.sh
+          chmod +x ./setup/setup.sh
           sh ./setup/unix.sh
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
